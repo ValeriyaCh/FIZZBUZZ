@@ -15,7 +15,7 @@ bool  div5 ( string x) {
 bool div3 (string c){
 
     int sum=11;
-    if((*(c.end()-1))=='-')
+    if((*(c.begin()))=='-')
 		c.erase(0,1);
 
 	if(c=="0" || c=="3" || c=="6" || c=="9")
@@ -37,11 +37,21 @@ bool div3 (string c){
 
 
 void fizzbuzz (ifstream &f1) {
-  string a;
+  string a,b;
   ofstream f2("output1.txt");
 
     while (!f1.eof()){
-            f1>>a;
+	    
+    	f1>>a;   
+	 b=a;
+	    
+   	 if((*(b.begin()))=='-')
+          	b.erase(0,1);
+	    
+         for (auto c : b){
+         	if(c<'0'|| c>'9')
+                	throw out_of_range("Wrong input");
+		 
             if( div3(a) && div5(a))
                     f2 << "fizzbuzz ";
             else if (div3(a) )
