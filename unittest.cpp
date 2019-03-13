@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    ifstream test("Test.txt");
+    ifstream test("test.txt");
     fizzbuzz(test);
     test.close();
     ifstream answer("output1.txt");
@@ -17,6 +17,8 @@ int main() {
         key >> b;
         assert ( a == b);
     }
+    answer.close();
+    key.close();
     cout << "Well done" << endl;
     return 0;
 }
