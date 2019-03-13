@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    ifstream test("input1.txt");
+    ifstream test("Test.txt");
     fizzbuzz(test);
     test.close();
     ifstream answer("output1.txt");
