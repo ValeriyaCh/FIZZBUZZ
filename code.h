@@ -51,6 +51,7 @@ void fizzbuzz (ifstream &f1) {
          for (auto c : b){
          	if(c<'0'|| c>'9')
                 	throw out_of_range("Wrong input");
+	 }
 		 
             if( div3(a) && div5(a))
                     f2 << "fizzbuzz ";
