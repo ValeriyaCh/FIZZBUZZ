@@ -41,9 +41,8 @@ void fizzbuzz (ifstream &f1) {
   string a,b;
   ofstream f2("output1.txt");
 
-    while (!f1.eof()){
+    while (f1 >> a){
 	    
-    	f1>>a;   
 	 b=a;
 	    
    	 if((*(b.begin()))=='-')
